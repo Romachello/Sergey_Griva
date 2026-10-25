@@ -1,30 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Об авторе — Сергей Николаевич Грива (1959–2026) | Биография, выставки, награды</title>
-  <meta name="description" content="Биография Сергея Гривы: село Уралово, ЛХУ им. Серова, Институт им. Репина, Научно-исследовательский музей РАХ, 11 персональных выставок. Заслуженный работник культуры РФ, доцент кафедры реставрации. Прощальное видео поклонников творчества.">
-  <meta name="keywords" content="Сергей Грива биография, художник Грива, реставратор Грива, Заслуженный работник культуры, персональные выставки Гривы, музей Бродского, музей Чистякова, Институт Репина">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://griva-art.ru/about.html">
-
-  <meta property="og:type" content="profile">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="Сергей Николаевич Грива (1959–2026) — биография">
-  <meta property="og:description" content="Живописец, реставратор, педагог. 11 персональных выставок. Заслуженный работник культуры РФ.">
-  <meta property="og:url" content="https://griva-art.ru/about.html">
-  <meta property="og:site_name" content="Наследие Сергея Гривы">
-  <meta property="og:image" content="https://griva-art.ru/image/og-griva-about.jpg">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Сергей Грива — художник, реставратор, педагог | Живопись и наследие</title>
+    <meta name="description" content="Сергей Николаевич Грива (1959–2026) — петербургский художник, реставратор и педагог. Заслуженный работник культуры РФ, доцент Института им. И. Е. Репина. Каталог из 500+ живописных работ.">
+    <!-- meta keywords удалён -->
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://griva-art.ru/">
+  
+    <!-- Open Graph + размеры -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Сергей Грива — художник, реставратор, педагог">
+    <meta property="og:description" content="Живопись Сергея Гривы (1959–2026): пейзажи, натюрморты, цветы. 500+ работ.">
+    <meta property="og:url" content="https://griva-art.ru/">
+    <meta property="og:site_name" content="Наследие Сергея Гривы">
+    <meta property="og:image" content="https://griva-art.ru/image/og-griva.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+  
+    <!-- Preconnect ко всем CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <!-- Урезанные шрифты: 400/500/600 Inter + 500/italic Playfair -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  
+    <!-- Preload hero-фото (LCP) -->
+    <link rel="preload" as="image" href="image/sergey-griva-hero.webp"
+          imagesrcset="image/sergey-griva-hero-600.webp 600w, image/sergey-griva-hero-900.webp 900w"
+          imagesizes="(max-width: 992px) 100vw, 50vw" fetchpriority="high">
+  
+    <!-- Критический CSS инлайн (пример — только above-the-fold) -->
+    <style>
+      :root{--color-bg:#1a1a1a;--color-accent:#c19a6b;--color-heading:#fff;--color-text:#e0e0e0}
+      body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:Inter,sans-serif}
+      .header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(26,26,26,.85);backdrop-filter:blur(10px)}
+      .hero{min-height:100svh;display:flex;align-items:center}
+      /* …и т. д. — только то, что нужно для первого экрана */
+    </style>
+  
+    <!-- Полный CSS асинхронно -->
+    <link rel="stylesheet" href="./css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="./css/style.css"></noscript>
+  
+    <!-- Font Awesome ЗАМЕНИТЬ на SVG-спрайт (см. ниже) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  </head>
 <body>
 
   <header class="header" id="header">

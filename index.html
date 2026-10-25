@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Сергей Грива — художник, реставратор, педагог | Живопись и наследие</title>
-  <meta name="description" content="Сергей Николаевич Грива (1959–2026) — петербургский художник, реставратор и педагог. Заслуженный работник культуры РФ, доцент Института им. И. Е. Репина, член Союза художников России. Пейзажи, натюрморты, цветы. Каталог из 500+ живописных работ.">
-  <meta name="keywords" content="Сергей Грива, художник Сергей Грива, Грива живопись, пейзажи, натюрморты, ленинградская школа живописи, реставратор, Академия художеств, купить картину, наследие художника">
+  <meta name="description" content="Сергей Николаевич Грива (1959–2026) — петербургский живописец, реставратор, доцент кафедры реставрации Института им. И. Е. Репина. Заслуженный работник культуры РФ. Пейзажи, натюрморты, цветы. 500+ работ.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://griva-art.ru/">
 
@@ -17,12 +16,20 @@
   <meta property="og:url" content="https://griva-art.ru/">
   <meta property="og:site_name" content="Наследие Сергея Гривы">
   <meta property="og:image" content="https://griva-art.ru/image/og-griva.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="image/sergey-griva-hero.jpg" fetchpriority="high">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/home.css" />
 
   <script type="application/ld+json">
   {
@@ -32,35 +39,25 @@
     "alternateName": "Сергей Грива",
     "birthDate": "1959",
     "deathDate": "2026",
-    "birthPlace": {
-      "@type": "Place",
-      "name": "село Уралово, Сумская область"
-    },
+    "birthPlace": { "@type": "Place", "name": "село Уралово, Сумская область" },
     "jobTitle": ["Художник", "Реставратор", "Педагог"],
-    "description": "Петербургский художник, реставратор, педагог. Заслуженный работник культуры РФ, доцент кафедры реставрации Института им. И. Е. Репина, член Союза художников России.",
+    "description": "Петербургский художник, реставратор, педагог. Заслуженный работник культуры РФ, доцент кафедры реставрации Института им. И. Е. Репина.",
     "alumniOf": [
       { "@type": "EducationalOrganization", "name": "Ленинградское художественное училище имени В. А. Серова" },
       { "@type": "EducationalOrganization", "name": "Институт живописи, скульптуры и архитектуры имени И. Е. Репина" }
     ],
-    "award": [
-      "Заслуженный работник культуры Российской Федерации (2010)",
-      "Медаль «За заслуги перед Академией художеств» (2003)",
-      "Ветеран труда (2004)"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Научно-исследовательский музей Российской академии художеств"
-    },
-    "knowsAbout": ["Живопись", "Реставрация станковой живописи", "Пейзаж", "Натюрморт", "Ленинградская школа живописи"]
+    "award": ["Заслуженный работник культуры Российской Федерации (2010)"],
+    "knowsAbout": ["Живопись", "Реставрация станковой живописи", "Пейзаж", "Натюрморт"]
   }
   </script>
 </head>
 
 <body>
 
+  <!-- ============ HEADER ============ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="./index.html" class="logo" aria-label="На главную — наследие Сергея Гривы">
+      <a href="./index.html" class="logo">
         Сергей <span class="logo__accent">Грива</span>
         <span class="logo__sub">Живопись · Наследие</span>
       </a>
@@ -68,8 +65,8 @@
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <a href="./about.html" class="nav__link">Об авторе</a>
         <a href="./catalog.html" class="nav__link">Каталог</a>
-        <a href="#expertise" class="nav__link">Наследие</a>
-        <a href="#blog" class="nav__link">Заметки</a>
+        <a href="#exhibitions" class="nav__link">Выставки</a>
+        <a href="#press" class="nav__link">Пресса</a>
         <a href="#contact" class="nav__link nav__link--cta">Связаться</a>
       </nav>
 
@@ -86,39 +83,42 @@
 
   <main>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <!-- ============ 1. HERO ============ -->
     <section class="hero" id="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="hero__pre-title">Санкт-Петербург · Ленинградская школа живописи</p>
+          <p class="hero__pre-title">Санкт-Петербург · 1959–2026</p>
           <h1 class="hero__title">
-            Живопись Сергея Гривы:<br>
-            <span class="text-accent">свет, который остаётся</span>
+            Живопись<br>
+            <span class="text-accent">Сергея Гривы</span>
           </h1>
 
           <blockquote class="quote-block hero__quote" cite="#">
-            <p>«Продолжая традиции классической живописи, Сергей Грива передавал лирическое начало в повседневном. Его картины — это разговор о времени, свете и тишине».</p>
+            <p>«Продолжая традиции классической живописи, он передавал лирическое начало в повседневном. Каждая его картина — разговор о времени, свете и тишине».</p>
           </blockquote>
 
           <div class="hero__stats">
             <div class="stat-item">
               <span class="stat-item__num">500+</span>
-              <span class="stat-item__desc">живописных работ</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-item__num">40+</span>
-              <span class="stat-item__desc">лет творчества</span>
+              <span class="stat-item__desc">работ в наследии</span>
             </div>
             <div class="stat-item">
               <span class="stat-item__num">11</span>
               <span class="stat-item__desc">персональных выставок</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__num">40+</span>
+              <span class="stat-item__desc">лет в искусстве</span>
             </div>
           </div>
         </div>
 
         <div class="hero__visual">
           <div class="hero__image-frame">
-            <img src="image/sergey-griva-hero.jpg" alt="Сергей Грива — петербургский художник и реставратор" class="hero__photo" width="600" height="800" loading="eager">
+            <img src="image/sergey-griva-hero.jpg"
+                 alt="Сергей Грива — петербургский художник и реставратор"
+                 class="hero__photo" width="600" height="800"
+                 fetchpriority="high" decoding="async">
           </div>
           <div class="hero__badge">
             <i class="fa-solid fa-award"></i> Заслуженный работник культуры РФ
@@ -127,50 +127,121 @@
       </div>
     </section>
 
-    <!-- ОБ АВТОРЕ — кратко -->
-    <section class="expertise" id="about">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Художник,<br>который реставрировал время</h2>
-          <p class="section-subtitle">Сергей Николаевич Грива (1959–2026) — петербургский живописец, реставратор и педагог. Заслуженный работник культуры РФ. Работы находятся в частных собраниях в России и за рубежом.</p>
-        </div>
-
-        <div class="expertise__grid">
-          <div class="expertise__card">
-            <i class="fa-solid fa-palette expertise__icon"></i>
-            <h3>Ленинградская школа</h3>
-            <p>Учился в ЛХУ им. В. А. Серова (с отличием, специальность «художник-реставратор масляной и темперной живописи») и в Институте им. И. Е. Репина. Продолжал традиции петербургской живописной школы — внимание к свету, цвету, тишине.</p>
-          </div>
-          <div class="expertise__card">
-            <i class="fa-solid fa-landmark expertise__icon"></i>
-            <h3>Реставратор Академии художеств</h3>
-            <p>С 1984 года работал в Научно-исследовательском музее РАХ; с 1989 — заведующий сектором реставрации станковой живописи, с 1994 — заведующий отделом реставрации. Работал с фондами Дома-музея И. Е. Репина «Пенаты», Музея-квартиры И. И. Бродского, Музея-мастерской А. И. Куинджи.</p>
-          </div>
-          <div class="expertise__card">
-            <i class="fa-solid fa-magnifying-glass-chart expertise__icon"></i>
-            <h3>Пейзаж и натюрморт</h3>
-            <p>Особое внимание — пейзажу и натюрморту. «Героями» его полотен становились простые вещи: старая утварь, фрукты, полевые цветы, вечерний закат над водой.</p>
-          </div>
-        </div>
-
-        <blockquote class="quote-block quote-block--center" cite="#">
-          <p>«В камерных, небольших по размеру полотнах мастера нашли отражение лирическая красота вечернего заката и полуденная дымка жаркого летнего дня, зеркальный блеск озёрной глади и буйство штормящего моря».</p>
-        </blockquote>
+    <!-- ============ 2. MARQUEE ============ -->
+    <section class="marquee" aria-label="Ключевые темы творчества">
+      <div class="marquee__track">
+        <span class="marquee__item">Пейзаж</span>
+        <span class="marquee__item">Натюрморт</span>
+        <span class="marquee__item">Цветы</span>
+        <span class="marquee__item">Этюды</span>
+        <span class="marquee__item">Ленинградская школа</span>
+        <span class="marquee__item">Реставрация</span>
+        <span class="marquee__item">Академия художеств</span>
+        <!-- дубль для бесшовности -->
+        <span class="marquee__item">Пейзаж</span>
+        <span class="marquee__item">Натюрморт</span>
+        <span class="marquee__item">Цветы</span>
+        <span class="marquee__item">Этюды</span>
+        <span class="marquee__item">Ленинградская школа</span>
+        <span class="marquee__item">Реставрация</span>
+        <span class="marquee__item">Академия художеств</span>
       </div>
     </section>
 
-    <!-- ИЗБРАННЫЕ РАБОТЫ -->
-    <section class="services" id="catalog">
+    <!-- ============ 3. ABOUT SPLIT ============ -->
+    <section class="expertise" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__visual">
+            <div class="about-split__image">
+              <img src="image/sergey-griva-portrait.jpg"
+                   alt="Портрет Сергея Николаевича Гривы в мастерской"
+                   width="600" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="about-split__accent" aria-hidden="true"></div>
+          </div>
+
+          <div class="about-split__content">
+            <p class="hero__pre-title">Об авторе</p>
+            <h2 class="section-title">Художник,<br>который реставрировал время</h2>
+            <p>Сергей Николаевич Грива — петербургский живописец, реставратор и педагог. С 1984 года работал в Научно-исследовательском музее Российской академии художеств, с 1994-го возглавлял отдел реставрации, с 2013 года преподавал в Институте им. И. Е. Репина.</p>
+            <p>Его живопись выросла не только из академической школы, но и из ежедневного соприкосновения с шедеврами прошлого — от голландских натюрмортов до русской классики.</p>
+
+            <div class="about-split__facts">
+              <div class="about-fact">
+                <span class="about-fact__label">Родился</span>
+                <span class="about-fact__value">1959 · село Уралово</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Союз художников</span>
+                <span class="about-fact__value">с 1992 года</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Звание</span>
+                <span class="about-fact__value">Заслуженный работник культуры РФ</span>
+              </div>
+              <div class="about-fact">
+                <span class="about-fact__label">Наследие</span>
+                <span class="about-fact__value">500+ живописных работ</span>
+              </div>
+            </div>
+
+            <p style="margin-top:2rem;">
+              <a href="./about.html" class="btn btn--primary">Полная биография</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. ЖАНРЫ ============ -->
+    <section class="services" id="genres">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Жанры</h2>
+          <p class="section-subtitle">Наследие художника охватывает четыре основных направления</p>
+        </div>
+
+        <div class="genres">
+          <div class="genre-card">
+            <i class="fa-solid fa-mountain-sun genre-card__icon"></i>
+            <h3 class="genre-card__title">Пейзаж</h3>
+            <p class="genre-card__count">более 200 работ</p>
+          </div>
+          <div class="genre-card">
+            <i class="fa-solid fa-apple-whole genre-card__icon"></i>
+            <h3 class="genre-card__title">Натюрморт</h3>
+            <p class="genre-card__count">более 150 работ</p>
+          </div>
+          <div class="genre-card">
+            <i class="fa-solid fa-seedling genre-card__icon"></i>
+            <h3 class="genre-card__title">Цветы</h3>
+            <p class="genre-card__count">более 100 работ</p>
+          </div>
+          <div class="genre-card">
+            <i class="fa-solid fa-paintbrush genre-card__icon"></i>
+            <h3 class="genre-card__title">Этюды</h3>
+            <p class="genre-card__count">архивные работы</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. EDITORIAL GRID — КАТАЛОГ ============ -->
+    <section class="cases" id="catalog">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Избранные работы</h2>
-          <p class="section-subtitle">Небольшая подборка из каталога. Полный каталог — на отдельной странице.</p>
+          <p class="section-subtitle">Подборка из каталога. У каждой работы — название, жанр, год, размер и место написания.</p>
         </div>
 
-        <div class="works__grid">
-          <article class="work-card">
+        <div class="editorial-grid">
+          <!-- Большая карточка -->
+          <article class="work-card work-card--lg">
             <div class="work-card__image">
-              <img src="image/works/sunset.jpg" alt="Картина Сергея Гривы «Вечерний закат», пейзаж, 2005" loading="lazy">
+              <img src="image/works/sunset.jpg"
+                   alt="«Вечерний закат» — пейзаж Сергея Гривы, 2005"
+                   width="800" height="640" loading="lazy" decoding="async">
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">«Вечерний закат»</h3>
@@ -181,148 +252,233 @@
                 <span><i class="fa-solid fa-location-dot"></i> Пушкинские Горы</span>
               </div>
               <p class="work-card__desc">Лирическая красота вечернего неба над холмами — один из любимых мотивов художника.</p>
-              <div class="work-card__actions">
-                <a href="#contact" class="btn btn--primary">Запросить</a>
-              </div>
             </div>
           </article>
 
-          <article class="work-card">
+          <article class="work-card work-card--sm">
             <div class="work-card__image">
-              <img src="image/works/still-life-fish.jpg" alt="Картина Сергея Гривы «Натюрморт с рыбой», 2012" loading="lazy">
+              <img src="image/works/still-life-fish.jpg"
+                   alt="«Натюрморт с рыбой» — Сергей Грива, 2012"
+                   width="600" height="600" loading="lazy" decoding="async">
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">«Натюрморт с рыбой»</h3>
               <div class="work-card__meta">
                 <span><i class="fa-solid fa-palette"></i> Натюрморт</span>
                 <span><i class="fa-solid fa-calendar"></i> 2012</span>
-                <span><i class="fa-solid fa-ruler-combined"></i> 50 × 70 см</span>
-                <span><i class="fa-solid fa-location-dot"></i> Санкт-Петербург</span>
-              </div>
-              <p class="work-card__desc">Отсылка к голландским мастерам, которых Грива изучал как реставратор. Простые вещи становятся героями полотна.</p>
-              <div class="work-card__actions">
-                <a href="#contact" class="btn btn--primary">Запросить</a>
               </div>
             </div>
           </article>
 
-          <article class="work-card">
+          <article class="work-card work-card--sm">
             <div class="work-card__image">
-              <img src="image/works/field-flowers.jpg" alt="Картина Сергея Гривы «Полевые цветы», 2018" loading="lazy">
+              <img src="image/works/field-flowers.jpg"
+                   alt="«Полевые цветы» — Сергей Грива, 2018"
+                   width="600" height="600" loading="lazy" decoding="async">
             </div>
             <div class="work-card__body">
               <h3 class="work-card__title">«Полевые цветы»</h3>
               <div class="work-card__meta">
                 <span><i class="fa-solid fa-palette"></i> Натюрморт</span>
                 <span><i class="fa-solid fa-calendar"></i> 2018</span>
-                <span><i class="fa-solid fa-ruler-combined"></i> 40 × 50 см</span>
-                <span><i class="fa-solid fa-location-dot"></i> Алупка</span>
               </div>
-              <p class="work-card__desc">Изящная красота простых цветов — мотив, в котором особенно заметна любовь художника к тихой живописи.</p>
-              <div class="work-card__actions">
-                <a href="#contact" class="btn btn--primary">Запросить</a>
+            </div>
+          </article>
+
+          <article class="work-card work-card--sm">
+            <div class="work-card__image">
+              <img src="image/works/sea.jpg"
+                   alt="«Штормящее море» — Сергей Грива, 2014"
+                   width="600" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">«Штормящее море»</h3>
+              <div class="work-card__meta">
+                <span><i class="fa-solid fa-palette"></i> Пейзаж</span>
+                <span><i class="fa-solid fa-calendar"></i> 2014</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-card work-card--sm">
+            <div class="work-card__image">
+              <img src="image/works/old-things.jpg"
+                   alt="«Старые вещи» — натюрморт Сергея Гривы, 2009"
+                   width="600" height="600" loading="lazy" decoding="async">
+            </div>
+            <div class="work-card__body">
+              <h3 class="work-card__title">«Старые вещи»</h3>
+              <div class="work-card__meta">
+                <span><i class="fa-solid fa-palette"></i> Натюрморт</span>
+                <span><i class="fa-solid fa-calendar"></i> 2009</span>
               </div>
             </div>
           </article>
         </div>
 
         <div style="text-align:center;margin-top:3rem;">
-          <a href="./catalog.html" class="btn btn--primary">Смотреть полный каталог</a>
+          <a href="./catalog.html" class="btn btn--primary">Смотреть каталог · 500+ работ</a>
         </div>
       </div>
     </section>
 
-    <!-- НАСЛЕДИЕ И ПРОВЕНАНС -->
-    <section class="cases" id="expertise">
+    <!-- ============ 6. QUOTE BANNER ============ -->
+    <section class="quote-banner">
+      <span class="quote-banner__mark" aria-hidden="true">«</span>
+      <div class="container">
+        <blockquote class="quote-banner__text">
+          В камерных, небольших по размеру полотнах мастера нашли отражение лирическая красота вечернего заката и полуденная дымка жаркого летнего дня, зеркальный блеск озёрной глади и буйство штормящего моря.
+        </blockquote>
+        <cite class="quote-banner__author">— о живописи Сергея Гривы</cite>
+      </div>
+    </section>
+
+    <!-- ============ 7. TIMELINE SHORT ============ -->
+    <section class="expertise" id="chronology">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Наследие и провенанс</h2>
-          <p class="section-subtitle">Как формировалась коллекция и что важно знать о работах Сергея Гривы</p>
+          <h2 class="section-title">Хронология</h2>
+          <p class="section-subtitle">Шесть вех — от рождения до наследия</p>
         </div>
 
-        <div class="accordion">
-          <div class="accordion__item">
-            <button class="accordion__header">
-              <span class="accordion__num">01</span>
-              <span class="accordion__title">Выставочная история и признание</span>
-              <i class="fa-solid fa-plus accordion__icon"></i>
-            </button>
-            <div class="accordion__body">
-              <div class="case-detail">
-                <p>Персональные выставки Сергея Гривы проходили в Голубом зале Научно-исследовательского музея РАХ (1991, 2019), в Музее-квартире И. И. Бродского (2002, 2003, 2007, 2009, 2013, 2015), в парадных залах НИМ РАХ (2014), в Музее Ф. М. Достоевского (2016), в Музее-усадьбе П. П. Чистякова (2018).</p>
-                <p>Художник был постоянным участником ежегодных выставок педагогов Института им. И. Е. Репина и юбилейных выставок Союза художников России. Работы находятся в частных художественных собраниях в России и за рубежом.</p>
-              </div>
-            </div>
+        <div class="timeline-short">
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">1959</span>
+            <p class="timeline-short__text">Родился в селе Уралово Сумской области.</p>
           </div>
-
-          <div class="accordion__item">
-            <button class="accordion__header">
-              <span class="accordion__num">02</span>
-              <span class="accordion__title">Провенанс и подлинность</span>
-              <i class="fa-solid fa-plus accordion__icon"></i>
-            </button>
-            <div class="accordion__body">
-              <div class="case-detail">
-                <p>Все работы происходят из семейной коллекции художника. Для каждой картины доступны сведения о годе создания, размере, жанре и месте написания. Мы открыты к диалогу с коллекционерами, галереями и исследователями творчества Сергея Гривы.</p>
-                <p>При необходимости предоставляются дополнительные фотографии, информация о состоянии сохранности и выставочной истории.</p>
-              </div>
-            </div>
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">1984</span>
+            <p class="timeline-short__text">Начал работу в НИМ РАХ. С отличием окончил ЛХУ им. Серова.</p>
           </div>
-
-          <div class="accordion__item">
-            <button class="accordion__header">
-              <span class="accordion__num">03</span>
-              <span class="accordion__title">Реставраторская работа</span>
-              <i class="fa-solid fa-plus accordion__icon"></i>
-            </button>
-            <div class="accordion__body">
-              <div class="case-detail">
-                <p>С 1984 года Сергей Грива работал в Научно-исследовательском музее Российской академии художеств. В 1989 году возглавил сектор реставрации станковой живописи, в 1994-м — отдел реставрации музея. Среди объектов, с которыми он работал как реставратор, — фонды Дома-музея И. Е. Репина «Пенаты», Музея-квартиры И. И. Бродского, Музея-мастерской А. И. Куинджи.</p>
-                <p>С 2013 года — доцент кафедры реставрации Института живописи, скульптуры и архитектуры им. И. Е. Репина.</p>
-              </div>
-            </div>
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">1992</span>
+            <p class="timeline-short__text">Принят в члены Союза художников России.</p>
+          </div>
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">2010</span>
+            <p class="timeline-short__text">Заслуженный работник культуры РФ.</p>
+          </div>
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">2013</span>
+            <p class="timeline-short__text">Доцент кафедры реставрации Института им. И. Е. Репина.</p>
+          </div>
+          <div class="timeline-short__item">
+            <span class="timeline-short__year">2026</span>
+            <p class="timeline-short__text">Наследие продолжает жить — 500+ работ.</p>
           </div>
         </div>
+
+        <p style="text-align:center;margin-top:2.5rem;">
+          <a href="./about.html" class="btn btn--primary">Подробная биография и видео</a>
+        </p>
       </div>
     </section>
 
-    <!-- ЗАМЕТКИ -->
-    <section class="blog" id="blog">
+    <!-- ============ 8. ВЫСТАВКИ (БИЛЕТЫ) ============ -->
+    <section class="blog" id="exhibitions">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Заметки о художнике</h2>
-          <p class="section-subtitle">Факты, контекст и размышления о месте Сергея Гривы в петербургской живописной традиции</p>
+          <h2 class="section-title">Персональные выставки</h2>
+          <p class="section-subtitle">11 персональных выставок — от Голубого зала НИМ РАХ до Музея-усадьбы П. П. Чистякова</p>
         </div>
 
-        <div class="blog__grid">
-          <article class="blog-card">
-            <div class="blog-card__meta"><i class="fa-regular fa-newspaper"></i> Биография</div>
-            <h3>«Реставратор, который писал пейзажи»</h3>
-            <blockquote class="blog-card__quote">
-              <p>«Сергей Грива с 1984 года работал в Научно-исследовательском музее РАХ, с 1994-го заведовал отделом реставрации. Его живопись выросла не только из академической школы, но и из ежедневного соприкосновения с шедеврами прошлого».</p>
-            </blockquote>
+        <div class="exhibitions">
+          <article class="exhibition-ticket">
+            <div class="exhibition-ticket__year">1991</div>
+            <div>
+              <h3 class="exhibition-ticket__title">Голубой зал НИМ РАХ</h3>
+              <p class="exhibition-ticket__place">Санкт-Петербург · Научно-исследовательский музей РАХ</p>
+            </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-card__meta"><i class="fa-regular fa-newspaper"></i> Традиция</div>
-            <h3>«Ленинградская школа: свет и тишина»</h3>
-            <blockquote class="blog-card__quote">
-              <p>«Продолжая традиции ленинградской школы живописи, Грива уделял особое внимание пейзажу. В его камерных полотнах — вечерний закат, полуденная дымка, зеркальный блеск озёрной глади».</p>
-            </blockquote>
+          <article class="exhibition-ticket">
+            <div class="exhibition-ticket__year">2002</div>
+            <div>
+              <h3 class="exhibition-ticket__title">Музей-квартира И. И. Бродского</h3>
+              <p class="exhibition-ticket__place">Санкт-Петербург · первая из шести выставок</p>
+            </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-card__meta"><i class="fa-regular fa-newspaper"></i> Наследие</div>
-            <h3>«500 работ: что осталось после художника»</h3>
-            <blockquote class="blog-card__quote">
-              <p>«Живописное наследие Сергея Гривы — около 500 картин. Пейзажи, натюрморты, цветы. Каждая работа — часть большого высказывания о красоте повседневного».</p>
-            </blockquote>
+          <article class="exhibition-ticket">
+            <div class="exhibition-ticket__year">2014</div>
+            <div>
+              <h3 class="exhibition-ticket__title">Парадные залы НИМ РАХ</h3>
+              <p class="exhibition-ticket__place">Санкт-Петербург · Научно-исследовательский музей РАХ</p>
+            </div>
           </article>
+
+          <article class="exhibition-ticket">
+            <div class="exhibition-ticket__year">2018</div>
+            <div>
+              <h3 class="exhibition-ticket__title">Музей-усадьба П. П. Чистякова</h3>
+              <p class="exhibition-ticket__place">Санкт-Петербург · последняя прижизненная выставка</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="exhibitions__all">
+          <a href="./about.html#exhibitions" class="nav__link">Все 11 выставок →</a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- ============ 9. ПРЕССА ============ -->
+    <section class="faq" id="press">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Пресса</h2>
+          <p class="section-subtitle">Несколько отзывов и публикаций о творчестве художника</p>
+        </div>
+
+        <div class="press-list">
+          <div class="press-item">
+            <p class="press-item__quote">«Тонкая живопись, в которой слышна тишина. Пейзажи Гривы — это разговор о времени, а не только о месте».</p>
+            <span class="press-item__source">Искусство · 2014</span>
+          </div>
+          <div class="press-item">
+            <p class="press-item__quote">«Продолжатель петербургской школы. В его натюрмортах — внимание к простым вещам, которое сегодня редко встретишь».</p>
+            <span class="press-item__source">Санкт-Петербургские ведомости · 2019</span>
+          </div>
+          <div class="press-item">
+            <p class="press-item__quote">«Реставратор, ставший художником. Опыт работы с музейными фондами читается в каждой его картине».</p>
+            <span class="press-item__source">Академия · 2016</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. ГАЛЕРЕЯ-КОЛЛАЖ ============ -->
+    <section class="expertise" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Из мастерской</h2>
+          <p class="section-subtitle">Фрагменты картин, фотографии мастера и рабочего процесса</p>
+        </div>
+
+        <div class="gallery-collage">
+          <div class="gallery-collage__item gallery-collage__item--hero">
+            <img src="image/gallery/g1.jpg" alt="Сергей Грива в мастерской" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-collage__item">
+            <img src="image/gallery/g2.jpg" alt="Фрагмент живописи" width="300" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-collage__item">
+            <img src="image/gallery/g3.jpg" alt="Фрагмент натюрморта" width="300" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-collage__item gallery-collage__item--wide">
+            <img src="image/gallery/g4.jpg" alt="Сергей Грива на открытии выставки" width="600" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-collage__item">
+            <img src="image/gallery/g5.jpg" alt="Фрагмент пейзажа" width="300" height="300" loading="lazy" decoding="async">
+          </div>
+          <div class="gallery-collage__item">
+            <img src="image/gallery/g6.jpg" alt="Рабочий стол художника" width="300" height="300" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. FAQ ============ -->
     <section class="faq" id="faq">
       <div class="container">
         <div class="section-header">
@@ -337,27 +493,25 @@
               <i class="fa-solid fa-plus accordion__icon"></i>
             </button>
             <div class="accordion__body">
-              <p>Да. Часть работ находится в семейной коллекции, и мы периодически организуем показы. Кроме того, картины Гривы выставлялись в Музее-квартире И. И. Бродского, Музее Ф. М. Достоевского, Музее-усадьбе П. П. Чистякова и в парадных залах НИМ РАХ. Чтобы узнать о ближайших показах, оставьте заявку.</p>
+              <p>Да. Часть работ находится в семейной коллекции, и мы периодически организуем показы. Картины Гривы выставлялись в Музее-квартире И. И. Бродского, Музее Ф. М. Достоевского, Музее-усадьбе П. П. Чистякова и в парадных залах НИМ РАХ.</p>
             </div>
           </div>
-
           <div class="accordion__item">
             <button class="accordion__header">
               <span class="accordion__title">Как узнать стоимость конкретной картины?</span>
               <i class="fa-solid fa-plus accordion__icon"></i>
             </button>
             <div class="accordion__body">
-              <p>Стоимость зависит от периода, размера, жанра и состояния сохранности работы. Мы предоставляем информацию по запросу: опишите интересующую вас картину или запросите каталог доступных работ.</p>
+              <p>Стоимость зависит от периода, размера, жанра и состояния сохранности. Напишите через форму — мы отправим каталог доступных работ или ответим по конкретной картине.</p>
             </div>
           </div>
-
           <div class="accordion__item">
             <button class="accordion__header">
               <span class="accordion__title">Есть ли у работ провенанс?</span>
               <i class="fa-solid fa-plus accordion__icon"></i>
             </button>
             <div class="accordion__body">
-              <p>Все работы происходят из семейной коллекции художника. Для каждой картины мы указываем год создания, размер, жанр и место написания. При необходимости предоставляются дополнительные материалы.</p>
+              <p>Все работы происходят из семейной коллекции художника. Для каждой картины указаны год, размер, жанр и место написания. При необходимости предоставляются дополнительные материалы.</p>
             </div>
           </div>
         </div>
@@ -369,80 +523,14 @@
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Можно ли увидеть работы Сергея Гривы вживую?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Да. Часть работ находится в семейной коллекции, и мы периодически организуем показы. Кроме того, картины Гривы выставлялись в Музее-квартире И. И. Бродского, Музее Ф. М. Достоевского, Музее-усадьбе П. П. Чистякова и в парадных залах НИМ РАХ."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Как узнать стоимость конкретной картины?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Стоимость зависит от периода, размера, жанра и состояния сохранности. Информация — по запросу через форму на сайте."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Есть ли у работ провенанс?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Все работы происходят из семейной коллекции художника. Для каждой картины указаны год создания, размер, жанр и место написания."
-          }
-        }
+        { "@type": "Question", "name": "Можно ли увидеть работы Сергея Гривы вживую?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Часть работ находится в семейной коллекции, и мы периодически организуем показы. Картины Гривы выставлялись в Музее-квартире И. И. Бродского, Музее Ф. М. Достоевского, Музее-усадьбе П. П. Чистякова и в парадных залах НИМ РАХ." } },
+        { "@type": "Question", "name": "Как узнать стоимость конкретной картины?", "acceptedAnswer": { "@type": "Answer", "text": "Стоимость зависит от периода, размера, жанра и состояния сохранности. Напишите через форму — мы отправим каталог доступных работ." } },
+        { "@type": "Question", "name": "Есть ли у работ провенанс?", "acceptedAnswer": { "@type": "Answer", "text": "Все работы происходят из семейной коллекции художника. Для каждой картины указаны год, размер, жанр и место написания." } }
       ]
     }
     </script>
 
-    <!-- ОТЗЫВЫ -->
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Отзывы и впечатления</h2>
-          <p class="section-subtitle">Что говорят те, кто уже видел работы Сергея Гривы</p>
-        </div>
-
-        <div class="testimonials__slider">
-          <div class="testimonials__viewport" id="testimonialViewport">
-            <div class="testimonials__track" id="testimonialTrack">
-              <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="testimonial-card__text">«Пейзажи Гривы — это не просто виды. В них есть то самое «ленинградское» ощущение света, которое сегодня редко встретишь. Смотришь — и становится тише».</p>
-                <p class="testimonial-card__author">— Частный коллекционер, Санкт-Петербург</p>
-              </div>
-              <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="testimonial-card__text">«Натюрморты Сергея Николаевича — отдельная вселенная. Простые вещи: рыба, старые часы, цветы. Но написаны так, что начинаешь видеть в них историю».</p>
-                <p class="testimonial-card__author">— Искусствовед, Москва</p>
-              </div>
-              <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="testimonial-card__text">«Я знал Сергея как реставратора. Но его собственная живопись — это отдельное, очень личное высказывание. Рад, что наследие сохраняется и остаётся доступным».</p>
-                <p class="testimonial-card__author">— Коллега, Академия художеств</p>
-              </div>
-            </div>
-          </div>
-          <button class="testimonials__arrow testimonials__arrow--prev" id="prevBtn" aria-label="Предыдущий отзыв">❮</button>
-          <button class="testimonials__arrow testimonials__arrow--next" id="nextBtn" aria-label="Следующий отзыв">❯</button>
-        </div>
-        <div class="testimonials__dots" id="testimonialDots"></div>
-
-        <p class="testimonials__note">
-          <i class="fa-solid fa-lock"></i> Мы не публикуем имена коллекционеров без их согласия. Все отзывы — реальные впечатления людей, которые видели работы Сергея Гривы.
-        </p>
-      </div>
-    </section>
-
-    <!-- КОНТАКТЫ -->
+    <!-- ============ 12. КОНТАКТ ============ -->
     <section class="contact" id="contact">
       <div class="container contact__grid">
         <div class="contact__info">
@@ -470,7 +558,7 @@
               <input type="checkbox" name="consent" required> Я согласен на обработку персональных данных
             </label>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">Запросить информацию о работах</button>
+          <button type="submit" class="btn btn--primary btn--full">Запросить информацию</button>
         </form>
       </div>
     </section>
@@ -485,20 +573,38 @@
     </div>
   </footer>
 
-  <script src="./js/script.js"></script>
-  <script src="./js/theme.js"></script>
-  <script src="./js/slider.js"></script>
+  <!-- Плавающая кнопка наверх -->
+  <button class="to-top" id="toTop" aria-label="Наверх">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="./js/script.js" defer></script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/slider.js" defer></script>
   <script>
-    (function() {
+    document.addEventListener('DOMContentLoaded', function () {
+      // Меню-бургер
       const burger = document.getElementById('burger');
       const nav = document.getElementById('nav');
       if (burger && nav) {
-        burger.addEventListener('click', function() {
+        burger.addEventListener('click', function () {
           nav.classList.toggle('nav--open');
           burger.setAttribute('aria-expanded', nav.classList.contains('nav--open'));
         });
       }
-    })();
+
+      // Кнопка наверх
+      const toTop = document.getElementById('toTop');
+      if (toTop) {
+        window.addEventListener('scroll', function () {
+          toTop.classList.toggle('visible', window.scrollY > 600);
+        }, { passive: true });
+        toTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
   </script>
+
 </body>
 </html>
